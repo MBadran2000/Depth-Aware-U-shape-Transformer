@@ -1,4 +1,4 @@
-# Depth-Aware-U-shape-Transformer
+# Depth-Aware-U-shape-Transformer (DAUT)
 Underwater Image Enhancement using Depth Aware U-shape Transformer
 
 
@@ -29,6 +29,7 @@ install required dependencies from requirement.txt
 ### Training
 <p align="center">
   <img width="800" src="./figs/f2.png">
+  <p>Training Pipeline of Our Depth Aware U-shape Transformer Network</p>
 </p>
 
 dataset will be uploaded
@@ -37,7 +38,8 @@ dataset will be uploaded
 ### Testing 
 <p align="center">
   <img width="800" src="./figs/f1.png">
+  <p>The Depth Aware U-shape Transformer Network</p>
 </p>
 
- weights will be uploaded
+weights will be uploaded
 
