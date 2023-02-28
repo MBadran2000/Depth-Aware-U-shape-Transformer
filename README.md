@@ -28,7 +28,7 @@ install required dependencies from requirement.txt
 
 ### Training
 <p align="center">
-  <img width="800" src="./figs/f2.">
+  <img width="800" src="./figs/f2.png">
 </p>
 
 dataset will be uploaded
