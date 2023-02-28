@@ -15,11 +15,11 @@ and uses (DPT) Vision Transformers for Dense Prediction
 below visual comparison between DAUT against U-shape Transformer and other physical and non-physical model enhancement methods, enhancing sampled images from our test dataset of different water types. it can be seen DAUT achieves state-of-the-art results.
 
 <p align="center">
-  <img width="800" src="./figs/f5">
+  <img width="800" src="./figs/f5.png">
 </p>
 
 <p align="center">
-  <img width="800" src="./figs/f4">
+  <img width="800" src="./figs/f4.png">
 </p>
 
 
@@ -36,7 +36,7 @@ dataset will be uploaded
 
 ### Testing 
 <p align="center">
-  <img width="800" src="./figs/f1">
+  <img width="800" src="./figs/f1.png">
 </p>
 
  weights will be uploaded
