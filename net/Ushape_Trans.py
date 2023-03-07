@@ -50,14 +50,14 @@ class Generator(nn.Module):
 		img_dim=256,
 		patch_dim=16,
 		embedding_dim=512,
-		num_channels=3,
+		num_channels=4,
 		num_heads=8,
-		num_layers=4,
+		num_layers=3,
 		hidden_dim=256,
 		dropout_rate=0.0,
 		attn_dropout_rate=0.0,
-		in_ch=3, 
-		out_ch=3,
+		in_ch=4, 
+		out_ch=4,
 		conv_patch_representation=True,
 		positional_encoding_type="learned",
 		use_eql=True):
@@ -132,7 +132,7 @@ class Generator(nn.Module):
 		self.Maxpool3 = nn.MaxPool2d(kernel_size=2, stride=2)
 		self.Maxpool4 = nn.MaxPool2d(kernel_size=2, stride=2)
 
-		self.Conv1=conv_block(self.in_ch, 16)
+		self.Conv1= conv_block(self.in_ch, 16)
 		self.Conv1_1 = conv_block(16, 32)
 		self.Conv2 = conv_block(32, 32)
 		self.Conv2_1 = conv_block(32, 64)
@@ -306,8 +306,8 @@ class Discriminator(nn.Module):
 
 
         #modulelist
-        self.rgb_to_feature1=ModuleList([from_rgb(32),from_rgb(64),from_rgb(128)])
-        self.rgb_to_feature2=ModuleList([from_rgb(32),from_rgb(64),from_rgb(128)])
+        self.rgb_to_feature1=ModuleList([from_rgb3(32),from_rgb3(64),from_rgb3(128)])
+        self.rgb_to_feature2=ModuleList([from_rgb3(32),from_rgb3(64),from_rgb3(128)])
 
 
         self.layer=_equalized_conv2d(self.in_channels*2, 64, (1, 1), bias=True)

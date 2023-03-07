@@ -398,6 +398,35 @@ class from_rgb(nn.Module):
     def __init__(self, outchannels, use_eql=True):
         super(from_rgb, self).__init__()
         if use_eql:
+            self.conv_1 = _equalized_conv2d(4, outchannels, (1, 1), bias=True)
+        else:
+            self.conv_1 = nn.Conv2d(4, outchannels, (1, 1),bias=True)
+        # pixel_wise feature normalizer:
+        self.pixNorm = PixelwiseNorm()
+
+        # leaky_relu:
+        self.lrelu = LeakyReLU(0.2)
+
+
+    def forward(self, x):
+        """
+        forward pass of the block
+        :param x: input
+        :return: y => output
+        """
+        y = self.pixNorm(self.lrelu(self.conv_1(x)))
+        return y
+
+
+class from_rgb3(nn.Module):
+    """
+    The RGB image is transformed into a multi-channel feature map to be concatenated with 
+    the feature map with the same number of channels in the network
+    把RGB图转换为多通道特征图，以便与网络中相同通道数的特征图拼接
+    """
+    def __init__(self, outchannels, use_eql=True):
+        super(from_rgb3, self).__init__()
+        if use_eql:
             self.conv_1 = _equalized_conv2d(3, outchannels, (1, 1), bias=True)
         else:
             self.conv_1 = nn.Conv2d(3, outchannels, (1, 1),bias=True)
