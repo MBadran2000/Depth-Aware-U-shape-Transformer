@@ -7,7 +7,7 @@ This repository contains code and models for [paper](https://arxiv.org/abs/2103.
 
 ### Citation
 
-Please cite  papers if you use this code or any of the models. 
+Please cite  papers if you use this code or the model. 
 ```
 @article{Ranftl2021,
 	author    = {Ren\'{e} Ranftl and Alexey Bochkovskiy and Vladlen Koltun},
