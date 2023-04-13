@@ -46,7 +46,7 @@ dataset will be uploaded
 2. Put underwater images in DPT/input/
 3. Run python DPT/run_segmentation.py
 4. Depth maps will be created in DPT/output_monodepth/ 
-5. Move Depth images “*.png” and put them in test/depth/
+5. Move Depth images “*.png” from DPT/output_monodepth/ to test/depth/
 
 #### Enhance underwater images 
 1. Download DAUT model [weights](https://drive.google.com/drive/folders/1fnWEzuvDmu9gfJWAUZbVY3-_h6E_Gntb?usp=share_link) and put it in saved_models/G/
